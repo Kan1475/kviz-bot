@@ -10,7 +10,8 @@ const client = new Client({
   partials: [Partials.Message, Partials.Channel, Partials.Reaction]
 });
 
-const TOKEN = 'MTM2NDkyMDI4ODc2ODQzMDA5MA.G3GoPW.p6VcLvLB8BFU4RppU9D1B8_aOKgiXG7LKv9KGU';
+// Token se sada uzima iz Replit sekreta
+const TOKEN = process.env.TOKEN;
 
 client.once('ready', () => {
   console.log(`Bot ulogovan kao ${client.user.tag}`);
